@@ -1,0 +1,16 @@
+{% extends 'blog/base_blog.html' %}
+{% block title %}
+tag list
+{% endblock %}
+{% block content %}
+<h1>Tags</h1>
+<div class="card mb-3">
+    <ul>
+        {% for tag in tags %}
+        <li>
+            {{ tag.title }}
+        </li>
+        {% endfor%}
+    </ul>
+</div>
+{% endblock %}

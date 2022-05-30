@@ -1,0 +1,15 @@
+{% extends 'blog/base_blog.html' %}
+{% block title %}
+{{ post.title }}
+{% endblock %}
+{% block content %}
+<div class="card mb-3">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <a href="#"><img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Minecraft.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+            <p class="card-text">{{ post.body }}</p>
+            <p class="card-text"><a href="#">Moba</a><a href="#">Action</a></p>
+            <p>{{ post.date_pub }}</p>
+        </div>
+</div>
+{% endblock %}
