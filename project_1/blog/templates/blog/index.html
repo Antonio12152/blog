@@ -5,19 +5,7 @@ master gaming
 {% block content %}
 <article>
     {% for post in posts %}
-    <div class="card mb-3">
-        <h5 class="card-title">{{ post.title }}</h5>
-        <a href="{{ post.get_absolute_url }}"><img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Minecraft.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body">
-            <p class="card-text">{{ post.body }}</p>
-            <p class="card-text">
-                {% for tag in post.tags.all %}
-                <a href="#">{{ tag }}</a>
-                {% endfor %}
-            </p>
-            <p>{{ post.date_pub }}</p>
-        </div>
-    </div>
+    {% include 'blog/includes/card_template.html' %}
     {% endfor %}
 </article>
 {% endblock %}

@@ -7,9 +7,7 @@ tag list
 <div class="card mb-3">
     <ul>
         {% for tag in tags %}
-        <li>
-            {{ tag.title }}
-        </li>
+        <li><a href="{{ tag.get_absolute_url }}">{{ tag.title }}</a></li>
         {% endfor%}
     </ul>
 </div>
