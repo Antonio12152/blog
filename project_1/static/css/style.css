@@ -1,0 +1,26 @@
+.product__link,.product__link:active,.product__link:hover{
+    text-decoration: none;
+    color: black;
+}
+.open-cart__icon {
+    background-image: url('../img/cart_img.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.open-cart__count{
+    background-color: none;
+    color: white;
+}
+
+.btn-shop{
+    background-color: black;
+    color: white;
+    margin: 10px;
+}
+
+.btn-danger{
+    margin: 10px;
+}

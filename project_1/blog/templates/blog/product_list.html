@@ -1,0 +1,26 @@
+{% extends 'blog/base_blog.html' %}
+{% block title %}
+store
+{% endblock %}
+{% block content %}
+<div class="container mt-5 pt-3">
+    <main>
+        {% for products in products_list %}
+        <div class="card-group">
+            {% for product in products%}
+            <div class="card product item-box">
+                <a href="{{product.get_absolute_url}}" class="product__link">
+                    <img src='{{ product.image.url }}' class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title product__title">{{ product.title }}</h5>
+                        <p class="card-text product__text">{{ product.body|truncatewords:10 }}</p>
+                        <p class="card-text">Prise: <span class="product__prise">{{ product.price }}</span> $</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </main>
+</div>
+{% endblock %}

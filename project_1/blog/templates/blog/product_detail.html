@@ -1,0 +1,22 @@
+{% extends 'blog/base_blog.html' %}
+{% block title %}
+store
+{% endblock %}
+{% block content %}
+<div class="container mt-5 pt-3">
+    <main>
+        <div class="card-group">
+            <div class="card product item-box">
+                    <img src='{{ product.image.url }}' class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title product__title">{{ product.title }}</h5>
+                        <p class="card-text product__text">{{ product.body }}</p>
+                        <p class="card-text">Prise: <span class="product__prise">{{ product.price }}</span> $</p>
+                    </div>
+                 <button class="btn btn-shop add-item" data-id="{{ product.slug }}" id="product-add">Добавить в корзину</button>
+                 <button type="button" class="btn btn-danger" id="modal-order-open" data-bs-toggle="modal" data-bs-target="#order">Buy now</button>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
